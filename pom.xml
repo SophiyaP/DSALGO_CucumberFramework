@@ -1,0 +1,195 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>DSALGO_Cucumber_Framework</groupId>
+  <artifactId>DSALGO_Cucumber_Framework</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+<dependencies>
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-java</artifactId>
+    <version>7.2.3</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/junit/junit -->
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.13.2</version>
+    <scope>test</scope>
+</dependency>
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-junit</artifactId>
+    <version>7.2.3</version>
+    <scope>test</scope>
+</dependency>
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-core</artifactId>
+    <version>7.2.3</version>
+</dependency>
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.4.0</version>
+    <scope>test</scope>
+</dependency>
+<!-- https://mvnrepository.com/artifact/ru.yandex.qatools.allure/allure-cucumber-jvm-adaptor -->
+<dependency>
+    <groupId>ru.yandex.qatools.allure</groupId>
+    <artifactId>allure-cucumber-jvm-adaptor</artifactId>
+    <version>1.6.4</version>
+</dependency>
+
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>3.141.59</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+<dependency>
+    <groupId>org.postgresql</groupId>
+    <artifactId>postgresql</artifactId>
+    <version>42.3.3</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-html -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-html</artifactId>
+    <version>0.2.7</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+<dependency>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <version>3.10.1</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-junit4 -->
+<dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-junit4</artifactId>
+    <version>2.17.3</version>
+    <scope>test</scope>
+</dependency>
+<dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-cucumber7-jvm</artifactId>
+    <version>2.17.3</version>
+</dependency>
+
+  <dependency>
+       <groupId>org.slf4j</groupId>
+       <artifactId>slf4j-api</artifactId>
+       <version>1.7.5</version>
+   </dependency>
+   <dependency>
+       <groupId>org.slf4j</groupId>
+       <artifactId>slf4j-simple</artifactId>
+       <version>1.6.4</version>
+   </dependency>
+
+
+   <dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>3.17</version>
+	</dependency>
+
+	
+	<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-api -->
+	<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-api</artifactId>
+    <version>3.141.59</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
+	<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-server</artifactId>
+    <version>3.141.59</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+<dependency>
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.6</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>3.7.1</version>
+</dependency>
+
+  <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+<dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-testng</artifactId>
+    <version>2.13.0</version>
+</dependency>
+  
+  
+
+
+<dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-junit5</artifactId>
+    <version>2.17.3</version>
+    <scope>test</scope>
+</dependency>
+
+
+</dependencies>
+
+<build>
+    <plugins>
+        <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.21</version>
+                <configuration>
+                <testFailureIgnore>false</testFailureIgnore>
+                        <argLine>
+                            -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                        </argLine>
+                    <systemProperties>
+                        <property>
+                            <name>junit.jupiter.extensions.autodetection.enabled</name>
+                            <value>true</value>
+                        </property>
+                    </systemProperties>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.junit.platform</groupId>
+                        <artifactId>junit-platform-surefire-provider</artifactId>
+                        <version>1.2.0</version>
+                    </dependency>
+                  <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+<dependency>
+    <groupId>org.aspectj</groupId>
+    <artifactId>aspectjweaver</artifactId>
+    <version>1.9.9.1</version>
+    <scope>runtime</scope>
+</dependency>
+
+                </dependencies>
+          
+</plugin>
+ <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>2.11.2</version>
+                <configuration>
+                    <reportVersion>2.4.1</reportVersion>
+                </configuration>
+            </plugin>
+    </plugins>
+</build>
+
+</project>
